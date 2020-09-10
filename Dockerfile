@@ -11,6 +11,4 @@ RUN apk add --update ca-certificates \
  && apk del --purge deps \
  && rm /var/cache/apk/*
 
-WORKDIR /root
-ENTRYPOINT ["kubectl"]
-CMD ["help"]
+CMD ["/usr/local/bin/kubectl"]
